@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+import Chessboard from './components/Chessboard';
+import ExtendedBoard from './components/ExtendedBoard';
+import LoginPage from './LoginPage'; // Importing the LoginPage component
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        {/* Default route for the login page */}
+        <Route path="/" element={<LoginPage />} />
+
+        {/* Route for the chessboard page */}
+        <Route path="/chessboard" element={<Chessboard />} />
+
+        {/* Route for the extended board page */}
+        <Route path="/extended-board" element={<ExtendedBoard />} />
+      </Routes>
+    </Router>
   );
 }
 

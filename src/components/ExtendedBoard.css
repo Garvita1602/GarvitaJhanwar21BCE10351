@@ -1,0 +1,194 @@
+    /* General Container Styles */
+    
+    .extended-board-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        /* Align the board and history at the top */
+        color: white;
+        padding: 30px;
+        font-family: Arial, sans-serif;
+        width: 100vw;
+        height: 100vh;
+        box-sizing: border-box;
+        background-color: rgba(30, 30, 30, 0.8);
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        z-index: 1;
+        overflow: hidden;
+    }
+    
+    .extended-board-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('/src/img/chessimage.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: blur(5px);
+        z-index: -1;
+        opacity: 0.8;
+        border-radius: 10px;
+    }
+    /* Chessboard Styles */
+    
+    .board {
+        display: grid;
+        grid-template-columns: repeat(6, 90px);
+        grid-template-rows: repeat(6, 90px);
+        gap: 2px;
+        background-color: #333;
+        padding: 5px;
+        border-radius: 5px;
+        margin-right: 20px;
+        /* Add margin to create space between board and history */
+    }
+    
+    .left-panel {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .right-panel {
+        margin-left: 20px;
+    }
+    /* Square Styles */
+    
+    .square {
+        width: 90px;
+        height: 90px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .square.light {
+        background-color: #f0d9b5;
+        color: #000000;
+    }
+    
+    .square.dark {
+        background-color: #b58863;
+        color: #ffffff;
+    }
+    /* Controls Section */
+    
+    .controls {
+        margin-top: 5px;
+    }
+    
+    .directions button {
+        margin: 0 2px;
+        padding: 2px 5px;
+        font-size: 2px;
+        background-color: #4CAF50;
+        color: rgb(19, 18, 18);
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+    .directions button:hover {
+        background-color: #0056b3;
+    }
+    /* Message and History */
+    
+    .message {
+        margin-bottom: 15px;
+        font-size: 1rem;
+        color: #e76f51;
+    }
+    
+    .square.selected {
+        background-color: yellow;
+        /* Highlight selected piece */
+    }
+    
+    .square.valid-move {
+        background-color: lightgreen;
+        /* Indicate valid move positions */
+    }
+    
+    .current-player {
+        margin: 5px 0;
+        font-size: 30px;
+        text-align: center;
+        color: rgb(245, 242, 242);
+        padding: 10px 20px;
+        background-color: rgba(158, 157, 157, 0.7);
+        /* Semi-transparent white background */
+        backdrop-filter: blur(50px);
+        /* Apply blur effect */
+        border-radius: 10px;
+        /* Rounded corners */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        /* Optional: Add a slight shadow for depth */
+        display: inline-block;
+        /* Ensures the box wraps around the text content */
+    }
+    /* Movement History */
+    
+    .history {
+        max-height: 160px;
+        /* Adjust height for 7 moves */
+        overflow-y: auto;
+        /* Enable vertical scrolling */
+        margin-top: 5px;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        padding: 10px;
+        width: 300px;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        color: black;
+    }
+    
+    .history h3 {
+        margin-top: 0;
+        color: black;
+    }
+    
+    .history ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .history li {
+        margin-bottom: 5px;
+        font-size: 0.9rem;
+        color: #ffffff;
+    }
+    /* Back to Home Button */
+    
+    .buttons-container {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+        width: 100%;
+    }
+    
+    .back-to-home {
+        margin-top: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        background-color: #4CAF50;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .back-to-home:hover {
+        background-color: #0056b3;
+    }

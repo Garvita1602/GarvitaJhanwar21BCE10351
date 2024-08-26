@@ -1,0 +1,243 @@
+#app {
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('/src/img/chessimage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.game-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    padding: 30px;
+    font-family: Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: rgba(30, 30, 30, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    z-index: 1;
+    /* Ensure content is above the blurred background */
+    overflow: hidden;
+    /* Hide any overflow from the pseudo-element */
+}
+
+.game-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/src/img/chessimage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(5px);
+    /* Apply the blur effect */
+    z-index: -1;
+    /* Ensure the blurred background stays behind the content */
+    opacity: 0.8;
+    /* Optional: Adjust the opacity of the background */
+    border-radius: 10px;
+    /* Ensure the radius matches the container */
+}
+
+.game-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    /* Center align the title */
+}
+
+.game-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 20px;
+    padding: 0 20px;
+    /* Add padding to give space around the edges */
+}
+
+#chessboard {
+    display: grid;
+    grid-template-columns: repeat(5, 90px);
+    grid-template-rows: repeat(5, 90px);
+    gap: 2px;
+    background-color: #333;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 490px;
+    /* Ensure some spacing between the chessboard and move history */
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tile {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.white-tile {
+    background-color: #f0d9b5;
+}
+
+.black-tile {
+    background-color: #b58863;
+}
+
+.piece {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ddd;
+    color: #333;
+}
+
+
+/* Place the current player section just below the chessboard */
+
+.piece.selected {
+    background-color: #ffff00;
+}
+
+.current-player {
+    margin: 10px 0;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(245, 242, 242);
+    padding: 10px 20px;
+    background-color: rgba(158, 157, 157, 0.7);
+    /* Semi-transparent white background */
+    backdrop-filter: blur(50px);
+    /* Apply blur effect */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a slight shadow for depth */
+    display: inline-block;
+    /* Ensures the box wraps around the text content */
+}
+
+.message {
+    margin: 10px 0;
+    font-size: 30px;
+    text-align: center;
+    color: white;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.move-buttons button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.killed-piece {
+    color: red;
+}
+
+.move-history {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    width: 600px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    color: black;
+}
+
+.move-history h3 {
+    margin-top: 0;
+    color: black;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:last-child {
+    margin-right: 0;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+.game-over-screen {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.game-over-screen h1 {
+    font-size: 36px;
+    color: #FFD700;
+    /* Gold color for the winner text */
+}
+
+.game-over-screen button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
