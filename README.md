@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chess-Like Game README</title>
+    
     
 </head>
 <body>
@@ -47,6 +47,9 @@
 
         <h3>Winning the Game 🏆</h3>
         <p>The game concludes when one player has successfully eliminated all of their opponent's characters. The victor is celebrated, and you have the option to start a new game to test your skills once more!</p>
+        <div class="footer">
+            <p>© 2024 Chess-Like Game. All rights reserved to Garvita Jhanwar.</p>
+        </div>
     </div>
 </body>
 </html>
