@@ -4,76 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chess-Like Game README</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            perspective: 1000px;
-        }
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            transform: rotateX(3deg);
-            transition: transform 0.3s ease;
-        }
-        .container:hover {
-            transform: rotateX(0deg);
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        h2 {
-            margin-top: 20px;
-        }
-        h3 {
-            margin-top: 15px;
-        }
-        ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-        code {
-            background: #e2e2e2;
-            padding: 2px 4px;
-            border-radius: 4px;
-        }
-        pre {
-            background: #e2e2e2;
-            padding: 10px;
-            border-radius: 4px;
-            overflow-x: auto;
-        }
-        .emoji {
-            font-size: 1.2em;
-        }
-        .button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 0;
-            background: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            text-align: center;
-            text-decoration: none;
-            font-size: 1em;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            transition: background 0.3s, box-shadow 0.3s;
-        }
-        .button:hover {
-            background: #0056b3;
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-        }
-    </style>
+    
 </head>
 <body>
     <div class="container">
