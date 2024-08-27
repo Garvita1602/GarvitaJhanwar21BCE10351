@@ -77,101 +77,45 @@
 </head>
 <body>
     <div class="container">
-        <h1>♟️ Chess-Like Game</h1>
+        <h1>♟️ Welcome to the Chess-Like Game!</h1>
 
-        <h2>Overview</h2>
-        <p>This game is a strategic chess-like game played on a 5x5 grid between two players. Each player controls a team of 5 characters, including Pawns, Hero1, Hero2, and optionally Hero3. Players arrange their characters on their respective starting rows and take turns to move their characters across the grid. The objective is to eliminate all of the opponent's characters. 🎯</p>
+        <h2>Game Overview</h2>
+        <p>Step into a thrilling chess-like battle on a 5x5 grid where strategy reigns supreme! Each player commands a team of five unique characters: Pawns, Hero1, Hero2, and optionally Hero3. Strategically deploy your team and outmaneuver your opponent to eliminate all their characters and claim victory. 🎯</p>
         <button class="button">Start Game Again</button>
         <button class="button">Add New Hero-Hero3</button>
 
-        <h2>Characters</h2>
+        <h2>Meet the Characters</h2>
 
         <h3>1. Pawn 🏰</h3>
-        <ul>
-            <li><strong>Movement:</strong> Moves one block in any direction (Left, Right, Forward, or Backward).</li>
-            <li><strong>Move Commands:</strong>
-                <ul>
-                    <li>L (Left)</li>
-                    <li>R (Right)</li>
-                    <li>F (Forward)</li>
-                    <li>B (Backward)</li>
-                </ul>
-            </li>
-        </ul>
+        <p>Pawns are your front-line fighters, moving one block in any direction: Left, Right, Forward, or Backward. Use them wisely to navigate the battlefield!</p>
 
         <h3>2. Hero1 ⚔️</h3>
-        <ul>
-            <li><strong>Movement:</strong> Moves two blocks straight in any direction.</li>
-            <li><strong>Combat:</strong> Kills any opponent's character in its path.</li>
-            <li><strong>Move Commands:</strong>
-                <ul>
-                    <li>L (Left)</li>
-                    <li>R (Right)</li>
-                    <li>F (Forward)</li>
-                    <li>B (Backward)</li>
-                </ul>
-            </li>
-        </ul>
+        <p>Hero1 charges ahead with powerful moves, traveling two blocks straight in any direction and clearing any opponent's character in its path. Their commanding presence can turn the tide of battle!</p>
 
         <h3>3. Hero2 🛡️</h3>
-        <ul>
-            <li><strong>Movement:</strong> Moves two blocks diagonally in any direction.</li>
-            <li><strong>Combat:</strong> Kills any opponent's character in its path.</li>
-            <li><strong>Move Commands:</strong>
-                <ul>
-                    <li>FL (Forward-Left)</li>
-                    <li>FR (Forward-Right)</li>
-                    <li>BL (Backward-Left)</li>
-                    <li>BR (Backward-Right)</li>
-                </ul>
-            </li>
-        </ul>
+        <p>Hero2 brings tactical versatility, moving two blocks diagonally and vanquishing any foe in their path. Use their diagonal strikes to outflank and eliminate your adversaries!</p>
 
         <h3>4. Hero3 🚀</h3>
-        <ul>
-            <li><strong>Movement:</strong> Moves in an L-shape.</li>
-            <li><strong>Combat:</strong> Kills only the character at its final landing position (if occupied by an opponent).</li>
-            <li><strong>Move Commands:</strong>
-                <ul>
-                    <li>FL (2 steps Forward, 1 step Left)</li>
-                    <li>FR (2 steps Forward, 1 step Right)</li>
-                    <li>BL (2 steps Backward, 1 step Left)</li>
-                    <li>BR (2 steps Backward, 1 step Right)</li>
-                    <li>RF (2 steps Right, 1 step Forward)</li>
-                    <li>RB (2 steps Right, 1 step Backward)</li>
-                    <li>LF (2 steps Left, 1 step Forward)</li>
-                    <li>LB (2 steps Left, 1 step Backward)</li>
-                </ul>
-            </li>
-        </ul>
+        <p>Hero3 excels in dynamic L-shaped moves, striking only at their final landing spot. With options like Forward-Left and Right-Forward, Hero3's unique movement can be a game-changer!</p>
 
-        <h3>Combat</h3>
-        <ul>
-            <li>For Hero1 and Hero2, any opponent's character in their path is removed, not just at the final destination.</li>
-            <li>Hero3 only removes opponents at its final landing position.</li>
-        </ul>
+        <h3>Combat Mechanics</h3>
+        <p>In combat, Hero1 and Hero2 eliminate any opponents in their path. Hero3, however, only removes enemies at its final position. Plan your moves carefully to maximize your advantage!</p>
 
         <h3>Invalid Moves</h3>
-        <ul>
-            <li>Moves are considered invalid if:
-                <ul>
-                    <li>The specified character doesn't exist.</li>
-                    <li>The move would take the character out of bounds.</li>
-                    <li>The move is not valid for the given character type.</li>
-                    <li>The move targets a friendly character.</li>
-                </ul>
-            </li>
-            <li>Players must retry their turn if they input an invalid move.</li>
-        </ul>
+        <p>Be cautious! Moves are invalid if they:
+            <ul>
+                <li>Attempt to move a non-existent character.</li>
+                <li>Take a character out of bounds.</li>
+                <li>Are not valid for the character type.</li>
+                <li>Target a friendly character.</li>
+            </ul>
+            Retry if you encounter any of these issues to keep the game flowing smoothly.</p>
 
         <h3>Movement History</h3>
-        <p>After each turn, the 5x5 grid is displayed with all character positions. Character names are prefixed with the player's identifier and character type (e.g., A-P1, B-H1, A-H2).</p>
+        <p>After each turn, check out the updated 5x5 grid displaying all characters. Names are prefixed with player identifiers and character types (e.g., A-P1, B-H1, A-H2) for easy tracking.</p>
 
         <h3>Winning the Game 🏆</h3>
-        <ul>
-            <li>The game ends when one player eliminates all of their opponent's characters.</li>
-            <li>The winning player is announced, and players can choose to start a new game.</li>
-        </ul>
+        <p>The game concludes when one player has successfully eliminated all of their opponent's characters. The victor is celebrated, and you have the option to start a new game to test your skills once more!</p>
     </div>
 </body>
 </html>
